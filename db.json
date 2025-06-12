@@ -1,0 +1,235 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "user_name": "John Doe",
+      "phone_num": "123456789",
+      "dob": "1990-01-01",
+      "address": "123 Main St"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "category_name": "Music Concert",
+      "category_icon": "🎵"
+    },
+    {
+      "id": "2",
+      "category_name": "Thể thao",
+      "category_icon": "🎤"
+    },
+    {
+      "id": "3",
+      "category_name": "Movie",
+      "category_icon": "🎬"
+    },
+    {
+      "id": "4",
+      "category_name": "Truyền thống",
+      "category_icon": "🎬"
+    }
+  ],
+  "events": [
+    {
+      "id": "2",
+      "event_name": "LỄ KỶ NIỆM 2 NĂM HONKAI: STAR RAIL - BUỔI XEM LIVE STAR RAIL 2025 - HỒ CHÍ MINH",
+      "event_desc": "Buổi xem live Star Rail hoành tráng tại HCM",
+      "event_date": "2025-05-03T18:00:00",
+      "location": "Lotte Gò Vấp",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/1c/7d/5e/3e6ace30e0a5745dd0a757d2981f84c5.png",
+      "category_id": 2,
+      "total_tickets": 100
+    },
+    {
+      "id": "3",
+      "event_name": "[SKQT] Kịch Ma 4D : CON QUỶ RỐI - Hết sợ hãi xem kịch Ma",
+      "event_desc": "Kịch ma 4D, rùng rợn nhưng hấp dẫn",
+      "event_date": "2025-04-19T19:30:00",
+      "location": "Sân Khấu Quốc Thảo",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/53/37/9c/1f49ba697fa7be5253c6a61a1416618e.jpg",
+      "category_id": 3,
+      "total_tickets": 0
+    },
+    {
+      "id": "4",
+      "event_name": "Attack on Titan Devotion - The Symphony of Freedom",
+      "event_desc": "Buổi hòa nhạc theo chủ đề AOT",
+      "event_date": "2025-04-25T19:30:00",
+      "location": "Nhà hát Quân đội",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/b4/87/85/fbd8fbcaeca158ad31be21884b29a942.jpg",
+      "category_id": 3,
+      "total_tickets": 120
+    },
+    {
+      "id": "5",
+      "event_name": "[GARDEN ART] - ART WORKSHOP VẼ TRANH ACRYLIC",
+      "event_desc": "Workshop vẽ tranh thư giãn cuối tuần",
+      "event_date": "2025-04-19T19:30:00",
+      "location": "Sân Khấu Quốc Thảo",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/57/00/c5/6271a558f72c011ec6b8a608ac0811c1.jpg",
+      "category_id": 3,
+      "total_tickets": 80
+    },
+    {
+      "id": "e336",
+      "event_name": "[FLOWER 1969’s] ROLLERBALL PERFUME WORKSHOP - NƯỚC HOA LĂN",
+      "event_desc": "Nước Hoa Lăn - Nước hoa tạo hương cơ thể ở dạng nước cất, được chiết xuất hoàn toàn từ những nguyên liệu thiên nhiên, bảo đảm an toàn cho làn da cũng như sức khoẻ người tiêu dùng. Chuyên nghiên cứu độc quyền về Mùi Hương, Flower 1969's tạo ra Workshop Nước hoa Lăn nhằm mang đến cho khách hàng những trải nghiệm thú vị về hương thuần tự nhiên cũng như những nghiên cứu sáng tạo về độc đáo hương cá nhân qua sở thích, tính cách của Bạn. \n",
+      "date": "2025-04-05T17:00:00.000Z",
+      "location": "SG",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/45/10/68/889ec9a53fb5f9f8be4010276f2a2bcb.png",
+      "category": "Thể thao",
+      "quality_ticket": 100
+    },
+    {
+      "id": "979c",
+      "event_name": "SÂN KHẤU 5B - VỞ KỊCH : Mặt Đối Mặt",
+      "event_desc": "🎭Chuyện người Việt xa xứ như anh Trần phải lao động vất vả gửi tiền về quê cho gia đình, nhưng gia đình như đám em Tâm, Chi của anh không biết thương mà cứ ăn chơi phung phí, hình như không hề cũ dù đã qua mấy mươi năm. Vì vậy kịch bản vẫn làm khán giả nhói tim. Nhưng bản dựng lần này đã cập nhật những cái mới của đời sống, chẳng hạn chuyện gọi video call trực tiếp, hoặc dì Sáu bánh tráng trộn làm Vlog… Cốt lõi vẫn là câu chuyện gia đình, về thứ tình thương không đúng cách khiến người thân ỷ lại. (báo Thanh Niên)",
+      "date": "2025-04-11T17:00:00.000Z",
+      "location": "Sân khấu kịch 5B Võ Văn Tần",
+      "banner_image": "https://images.tkbcdn.com/2/1560/600/Upload/eventcover/2024/02/02/841743.jpg",
+      "category": "Phim",
+      "quality_ticket": 1000
+    },
+    {
+      "id": "c1e2",
+      "event_name": "129BPM: ĐỘNG PHÁCH TÁCH KÉN",
+      "event_desc": "Trung Tâm Nghệ Thuật Âu Cơ - 8 P. Huỳnh Thúc Kháng, Thành Công, Ba Đình, Hà Nội\n\n",
+      "date": "2025-04-12T17:00:00.000Z",
+      "location": "Trung Tâm Nghệ Thuật Âu Cơ - 8 P. Huỳnh Thúc Kháng, Thành Công, Ba Đình, Hà Nội",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/e1/5a/93/6f1e3f3f40eb1bcee23d4125f8e166ad.jpg",
+      "category": "Phim",
+      "quality_ticket": 4999
+    },
+    {
+      "id": "80ee",
+      "event_name": "MADAME SHOW - NHỮNG ĐƯỜNG CHIM BAY",
+      "event_desc": "MADAME SHOW - NHỮNG ĐƯỜNG CHIM BAY\n\n",
+      "date": "2025-04-25T17:00:00.000Z",
+      "location": "Sài Gòn",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/51/b4/2f/753fa09de83c3b675867be409387e713.jpg",
+      "category": "Âm nhạc",
+      "quality_ticket": 496
+    }
+  ],
+  "ticketTypes": [
+    {
+      "id": "1",
+      "type_name": "VIP",
+      "price": 500000
+    },
+    {
+      "id": "2",
+      "type_name": "Standard",
+      "price": 200000
+    }
+  ],
+  "eventTicketTypes": [
+    {
+      "id": "1",
+      "event_id": 1,
+      "ticket_type_id": 1,
+      "price": 500000
+    },
+    {
+      "id": "2",
+      "event_id": 1,
+      "ticket_type_id": 2,
+      "price": 200000
+    },
+    {
+      "id": "3",
+      "event_id": 2,
+      "ticket_type_id": 2,
+      "price": 400000
+    },
+    {
+      "id": "4",
+      "event_id": 3,
+      "ticket_type_id": 1,
+      "price": 900000
+    },
+    {
+      "id": "5",
+      "event_id": 4,
+      "ticket_type_id": 2,
+      "price": 80
+    },
+    {
+      "id": "6",
+      "event_id": 5,
+      "ticket_type_id": 2,
+      "price": 60
+    }
+  ],
+  "tickets": [
+    {
+      "id": "1",
+      "event_id": 1,
+      "user_id": 1,
+      "ticket_type_id": 1,
+      "qr_code": "QRCODE123456",
+      "purchase_date": "2025-04-17T10:00:00Z"
+    },
+    {
+      "id": "7d67",
+      "userId": 1,
+      "eventId": "2",
+      "ticket_type_id": "standard",
+      "quantity": 1,
+      "note": "",
+      "totalPrice": 100000,
+      "type": "standard"
+    },
+    {
+      "id": "128a",
+      "userId": 1,
+      "eventId": "4",
+      "ticket_type_id": "vip",
+      "quantity": 1,
+      "note": "",
+      "totalPrice": 180000,
+      "type": "vip"
+    },
+    {
+      "id": "4854",
+      "userId": 1,
+      "eventId": "2",
+      "ticket_type_id": "vip",
+      "quantity": 2,
+      "note": "",
+      "totalPrice": 360000,
+      "type": "vip"
+    },
+    {
+      "id": "ebb0",
+      "userId": 1,
+      "eventId": "2",
+      "ticket_type_id": "standard",
+      "quantity": 1,
+      "note": "",
+      "totalPrice": 100000,
+      "type": "standard"
+    },
+    {
+      "id": "c0c7",
+      "userId": 1,
+      "eventId": "2",
+      "ticket_type_id": "standard",
+      "quantity": 1,
+      "note": "",
+      "totalPrice": 90000,
+      "type": "standard"
+    },
+    {
+      "id": "8c0d",
+      "userId": 1,
+      "eventId": "2",
+      "ticket_type_id": "vip",
+      "quantity": 2,
+      "note": "",
+      "totalPrice": 360000,
+      "type": "vip"
+    }
+  ]
+}
