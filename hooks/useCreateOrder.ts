@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export async function createZaloPayOrder(orderData: {
   fullName: string;
@@ -8,6 +8,6 @@ export async function createZaloPayOrder(orderData: {
   amount: number;
   description: string;
 }) {
-  const response = await axios.post("/api/zalo-order", orderData);
+  const response = await axios.post('/api/zalo-order', orderData);
   return response.data;
 }

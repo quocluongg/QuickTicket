@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1749790054068,
+    "name": "Roadtrip to 1900 #66: YOUNA | Friday 13.06.2025",
+    "description": "Roadtrip to 1900 #66: YOUNA | Friday 13.06.2025\r\n\r\n",
+    "date": "6/13/2025",
+    "location": "1900 Le Théâtre",
+    "ticketTypes": [
+      {
+        "name": "VIP_1",
+        "price": 100000,
+        "quantity": 100
+      }
+    ],
+    "seatRows": 0,
+    "seatColumns": 0
+  },
+  {
+    "id": 1749790180093,
+    "name": "Roadtrip to 1900 #66: YOUNA | Friday 13.06.2025",
+    "description": "Roadtrip to 1900 #66: YOUNA | Friday 13.06.2025\r\n\r\n",
+    "image": null,
+    "date": "6/13/2025",
+    "location": "1900 Le Théâtre",
+    "ticketTypes": [
+      {
+        "name": "VIP_1",
+        "price": 100000,
+        "quantity": 100
+      }
+    ],
+    "seatRows": 0,
+    "seatColumns": 0
+  },
+  {
+    "id": 1749790202714,
+    "name": "Roadtrip to 1900 #66: YOUNA | Friday 13.06.2025",
+    "description": "Roadtrip to 1900 #66: YOUNA | Friday 13.06.2025\r\n\r\n",
+    "image": null,
+    "date": "6/13/2025",
+    "location": "1900 Le Théâtre",
+    "ticketTypes": [
+      {
+        "name": "VIP_1",
+        "price": 100000,
+        "quantity": 100
+      }
+    ],
+    "seatRows": 0,
+    "seatColumns": 0
+  },
+  {
+    "id": 1749791279895,
+    "name": "Test",
+    "description": "Hf đì hfj",
+    "image": null,
+    "date": "6/13/2025",
+    "location": "Hdhfjf",
+    "ticketTypes": [],
+    "seatRows": 10,
+    "seatColumns": 12
+  }
+]

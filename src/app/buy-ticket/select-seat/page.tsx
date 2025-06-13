@@ -1,8 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useBookingStore } from '@hooks/useBookingStore';
 
 const SeatSelection: React.FC = () => {
+  const router = useRouter();
   const rows = 6;
   const cols = 8;
   const takenSeats = [
@@ -18,16 +21,22 @@ const SeatSelection: React.FC = () => {
     '3-8',
   ]; // VD
 
-  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
+  const [selectedSeats, setLocalSelectedSeats] = useState<string[]>([]);
+  const setGlobalSelectedSeats = useBookingStore(state => state.setSelectedSeats);
+
+  const handleNext = () => {
+    setGlobalSelectedSeats(['A1', 'A2']); // Dummy data
+    router.push('/buy-ticket/select-combo');
+  };
 
   const handleSelect = (row: number, col: number) => {
     const seatId = `${row}-${col}`;
     if (takenSeats.includes(seatId)) return;
 
     if (selectedSeats.includes(seatId)) {
-      setSelectedSeats(selectedSeats.filter((s) => s !== seatId));
+      setLocalSelectedSeats(selectedSeats.filter((s) => s !== seatId));
     } else {
-      setSelectedSeats([...selectedSeats, seatId]);
+      setLocalSelectedSeats([...selectedSeats, seatId]);
     }
   };
 
@@ -138,7 +147,7 @@ const SeatSelection: React.FC = () => {
         </div>
       </div>
       <div className="p-4 fixed left-0 bottom-0 w-full">
-        <button className="w-full rounded-[14px] bg-[#761cbc] px-4 py-3 text-zinc-950 font-bold hover:bg-white/90 !text-white mt-[30px]">
+        <button onClick={handleNext} className="w-full rounded-[14px] bg-[#761cbc] px-4 py-3 text-zinc-950 font-bold hover:bg-white/90 !text-white mt-[30px]">
           Checkout
         </button>
       </div>

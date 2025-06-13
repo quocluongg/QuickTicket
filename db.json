@@ -33,21 +33,22 @@
   "events": [
     {
       "id": "2",
-      "event_name": "LỄ KỶ NIỆM 2 NĂM HONKAI: STAR RAIL - BUỔI XEM LIVE STAR RAIL 2025 - HỒ CHÍ MINH",
+      "event_name": "VBA STAR X 2025 | Game 23 - Hanoi Buffaloes vs Ho Chi Minh City Wings",
       "event_desc": "Buổi xem live Star Rail hoành tráng tại HCM",
-      "event_date": "2025-05-03T18:00:00",
-      "location": "Lotte Gò Vấp",
-      "banner_image": "https://salt.tkbcdn.com/ts/ds/1c/7d/5e/3e6ace30e0a5745dd0a757d2981f84c5.png",
+      "event_date": "2025-06-22T19:00:00",
+      "location": "Nhà thi đấu Tây Hồ",
+      "banner_image": "https://salt.tkbcdn.com/ts/ds/a4/91/2b/794a4074496312a16dbe631ffd378c7d.png",
       "category_id": 2,
       "total_tickets": 100
     },
     {
       "id": "3",
-      "event_name": "[SKQT] Kịch Ma 4D : CON QUỶ RỐI - Hết sợ hãi xem kịch Ma",
-      "event_desc": "Kịch ma 4D, rùng rợn nhưng hấp dẫn",
-      "event_date": "2025-04-19T19:30:00",
-      "location": "Sân Khấu Quốc Thảo",
-      "banner_image": "https://salt.tkbcdn.com/ts/ds/53/37/9c/1f49ba697fa7be5253c6a61a1416618e.jpg",
+      "event_name": "PHIM ĐIỆN ẢNH DORAEMON: NOBITA VÀ CUỘC PHIÊU LƯU VÀO THẾ GIỚI TRONG TRANH 2025",
+      "event_desc": "PHIM ĐIỆN ẢNH DORAEMON: NOBITA VÀ CUỘC PHIÊU LƯU VÀO THẾ GIỚI TRONG TRANH 2025",
+      "event_date": "2025-06-30T19:30:00",
+      "location": "Rạp Galaxy Trung Tránh",
+      "event_type":"movie",
+      "banner_image": "https://www.fahasa.com/blog/wp-content/uploads/2025/03/doraemon-3.jpg",
       "category_id": 3,
       "total_tickets": 0
     },
@@ -164,72 +165,41 @@
   ],
   "tickets": [
     {
-      "id": "1",
-      "event_id": 1,
-      "user_id": 1,
-      "ticket_type_id": 1,
-      "qr_code": "QRCODE123456",
-      "purchase_date": "2025-04-17T10:00:00Z"
+      "id": 1,
+      "event": {
+        "id": "979c",
+        "event_name": "SÂN KHẤU 5B - VỞ KỊCH : Mặt Đối Mặt",
+        "event_desc": "🎭Chuyện người Việt xa xứ như anh Trần phải lao động vất vả gửi tiền về quê cho gia đình, nhưng gia đình như đám em Tâm, Chi của anh không biết thương mà cứ ăn chơi phung phí, hình như không hề cũ dù đã qua mấy mươi năm. Vì vậy kịch bản vẫn làm khán giả nhói tim. Nhưng bản dựng lần này đã cập nhật những cái mới của đời sống, chẳng hạn chuyện gọi video call trực tiếp, hoặc dì Sáu bánh tráng trộn làm Vlog… Cốt lõi vẫn là câu chuyện gia đình, về thứ tình thương không đúng cách khiến người thân ỷ lại. (báo Thanh Niên)",
+        "date": "2025-04-11T17:00:00.000Z",
+        "location": "Sân khấu kịch 5B Võ Văn Tần",
+        "banner_image": "https://images.tkbcdn.com/2/1560/600/Upload/eventcover/2024/02/02/841743.jpg",
+        "category": "Phim",
+        "quality_ticket": 1000
+      },
+      "buyer": {
+        "name": "Lương Võ Khôi Quốc",
+        "transactionId": "CLD09738PL"
+      },
+      "seat": "VIP_3A",
+      "type": "VIP",
+      "qrCode": "https://api.qrserver.com/v1/create-qr-code/?data=CLD09738PL"
     },
     {
-      "id": "7d67",
-      "userId": 1,
-      "eventId": "2",
-      "ticket_type_id": "standard",
-      "quantity": 1,
-      "note": "",
-      "totalPrice": 100000,
-      "type": "standard"
-    },
-    {
-      "id": "128a",
-      "userId": 1,
-      "eventId": "4",
-      "ticket_type_id": "vip",
-      "quantity": 1,
-      "note": "",
-      "totalPrice": 180000,
-      "type": "vip"
-    },
-    {
-      "id": "4854",
-      "userId": 1,
-      "eventId": "2",
-      "ticket_type_id": "vip",
-      "quantity": 2,
-      "note": "",
-      "totalPrice": 360000,
-      "type": "vip"
-    },
-    {
-      "id": "ebb0",
-      "userId": 1,
-      "eventId": "2",
-      "ticket_type_id": "standard",
-      "quantity": 1,
-      "note": "",
-      "totalPrice": 100000,
-      "type": "standard"
-    },
-    {
-      "id": "c0c7",
-      "userId": 1,
-      "eventId": "2",
-      "ticket_type_id": "standard",
-      "quantity": 1,
-      "note": "",
-      "totalPrice": 90000,
-      "type": "standard"
-    },
-    {
-      "id": "8c0d",
-      "userId": 1,
-      "eventId": "2",
-      "ticket_type_id": "vip",
-      "quantity": 2,
-      "note": "",
-      "totalPrice": 360000,
-      "type": "vip"
+      "id": 2,
+      "event": {
+        "name": "Coldplay : Và những người bạn",
+        "date": "2025-11-15",
+        "time": "21:00",
+        "location": "Sân vận động quân khu 7, TP.HCM",
+        "banner": "https://example.com/banner.jpg"
+      },
+      "buyer": {
+        "name": "Nguyễn Thị Lan",
+        "transactionId": "CLD20384TR"
+      },
+      "seat": "VIP_2B",
+      "type": "VIP",
+      "qrCode": "https://api.qrserver.com/v1/create-qr-code/?data=CLD20384TR"
     }
   ]
 }

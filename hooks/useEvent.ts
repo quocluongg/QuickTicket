@@ -67,7 +67,13 @@ export const useCreateEvent = () => {
 export const useUpdateEvent = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: async ({ id, data }: { id: string | number; data: Partial<Event> }) => {
+    mutationFn: async ({
+      id,
+      data,
+    }: {
+      id: string | number;
+      data: Partial<Event>;
+    }) => {
       const res = await fetch(`${API_URL}/events/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

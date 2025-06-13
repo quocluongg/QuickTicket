@@ -9,7 +9,7 @@ const page = () => {
   const id = params?.id;
   return (
     <MobilePageLayout className="" fullScreen>
-      <ContentPage id={id}/>
+      <ContentPage id={id} />
     </MobilePageLayout>
   );
 };

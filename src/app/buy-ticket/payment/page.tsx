@@ -1,21 +1,43 @@
-'use client'
+'use client';
+import { useBookingStore } from '@hooks/useBookingStore';
 import { createZaloPayOrder } from '@hooks/useCreateOrder';
 import { useState } from 'react';
 
 export default function PaymentSummary() {
+  const { selectedSeats, comboItems, ticketType, ticketQuantity } = useBookingStore();
   const [selectedMethod, setSelectedMethod] = useState('zalo');
-  const [promoCode, setPromoCode] = useState("");
-  const [orderUrl, setOrderUrl] = useState("");
+  const [promoCode, setPromoCode] = useState('');
+  const [orderUrl, setOrderUrl] = useState('');
   const [showModal, setShowModal] = useState(false);
+
+  const seatPrice = 200_000;
+  const comboPriceMap: Record<string, number> = {
+    comboMộtMình: 79_000,
+    comboCặpĐôi: 120_000,
+  };
+  const seatTotal = selectedSeats.length > 0
+  ? selectedSeats.length * seatPrice
+  : (ticketType?.price || 0) * (ticketQuantity || 0);
+
+const comboTotal = comboItems.reduce((total, item) => {
+  const unitPrice = comboPriceMap[item.name] || 0;
+  return total + unitPrice * item.quantity;
+}, 0);
+
+const discount = promoCode === 'GIAM10' ? 10_000 : 0;
+const total = seatTotal + comboTotal - discount;
+
 
   const handleSubmit = async () => {
     const zaloOrderData = {
-      fullName: "quoc",
-      email: "quoc",
-      phone: "9000",
-      quantity: 1,
-      amount: 100000,
-      description: `Thanh toán vé loại TEST`,
+      fullName: 'quoc',
+      email: 'quoc@example.com',
+      phone: '0900000000',
+      quantity: selectedSeats.length,
+      amount: total,
+      description: selectedSeats.length > 0
+  ? `Thanh toán ${selectedSeats.length} vé + combo`
+  : `Thanh toán ${ticketQuantity} vé loại ${ticketType?.name}`,
     };
 
     const result = await createZaloPayOrder(zaloOrderData);
@@ -33,37 +55,65 @@ export default function PaymentSummary() {
 
       {/* Info box */}
       <div className="bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-xl px-4 py-3 text-sm">
-        <p>Nov 15 2025 - Sân vận động quận khu 7, TP.HCM</p>
+        <p><strong>Ghế:</strong> {selectedSeats.join(', ')}</p>
+        <p><strong>Combo:</strong> {comboItems.map(item => `${item.name} x${item.quantity}`).join(', ') || 'Không'}</p>
       </div>
 
-      {/* Items */}
+      {/* Dynamic items */}
       <div className="space-y-1 text-sm">
-        <div className="flex justify-between">
-          <span>1x Vé VIP – E5</span>
-          <span className="font-medium">200.000đ</span>
-        </div>
-        <div className="flex justify-between">
-          <span>1x comboMộtMình</span>
-          <span className="font-medium">79.000đ</span>
-        </div>
-        <div className="flex justify-between text-red-500">
-          <span>1x Discount</span>
-          <span className="font-medium">−9.000đ</span>
-        </div>
-        <div className="flex justify-between font-bold text-base border-t pt-2 mt-2">
-          <span>TỔNG CỘNG</span>
-          <span>270.000đ</span>
-        </div>
+  {selectedSeats.length > 0 ? (
+    selectedSeats.map((seat, idx) => (
+      <div key={idx} className="flex justify-between">
+        <span>1x Vé VIP – {seat}</span>
+        <span className="font-medium">{seatPrice.toLocaleString('vi-VN')}đ</span>
       </div>
+    ))
+  ) : (
+    <div className="flex justify-between">
+      <span>{ticketQuantity}x {ticketType?.name}</span>
+      <span className="font-medium">
+        {(ticketQuantity * (ticketType?.price || 0)).toLocaleString('vi-VN')}đ
+      </span>
+    </div>
+  )}
+
+  {comboItems.map((item, idx) => {
+    const unitPrice = comboPriceMap[item.name] || 0;
+    return (
+      <div key={idx} className="flex justify-between">
+        <span>{item.quantity}x {item.name}</span>
+        <span className="font-medium">
+          {(79000 * item.quantity).toLocaleString('vi-VN')}đ
+        </span>
+      </div>
+    );
+  })}
+
+  {discount > 0 && (
+    <div className="flex justify-between text-red-500">
+      <span>Discount</span>
+      <span className="font-medium">−{discount.toLocaleString('vi-VN')}đ</span>
+    </div>
+  )}
+
+  <div className="flex justify-between font-bold text-base border-t pt-2 mt-2">
+    <span>TỔNG CỘNG</span>
+    <span>{total.toLocaleString('vi-VN')}đ</span>
+  </div>
+</div>
+
 
       {/* Payment Method */}
       <div>
         <p className="text-sm font-medium mb-2">Phương thức thanh toán</p>
 
+        {/* ZaloPay option */}
         <div
           onClick={() => setSelectedMethod('zalo')}
           className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer border ${
-            selectedMethod === 'zalo' ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-100'
+            selectedMethod === 'zalo'
+              ? 'border-blue-500 bg-blue-50'
+              : 'hover:bg-gray-100'
           }`}
         >
           <img
@@ -76,10 +126,13 @@ export default function PaymentSummary() {
           </div>
         </div>
 
+        {/* VietQR option */}
         <div
           onClick={() => setSelectedMethod('vietqr')}
           className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer border mt-2 ${
-            selectedMethod === 'vietqr' ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-100'
+            selectedMethod === 'vietqr'
+              ? 'border-blue-500 bg-blue-50'
+              : 'hover:bg-gray-100'
           }`}
         >
           <img
@@ -111,7 +164,7 @@ export default function PaymentSummary() {
 
         {showModal && orderUrl && (
           <div className="mt-4 p-4 border rounded-xl bg-green-50 text-green-700 text-sm">
-            Link thanh toán:{" "}
+            Link thanh toán:{' '}
             <a
               href={orderUrl}
               target="_blank"
